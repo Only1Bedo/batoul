@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الي بتولي❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- الأصوات -->
+    <audio id="heartbeat-sound" src="assets/heartbeat.mp3" loop></audio>
+    <audio id="main-music" src="assets/music1.mp3" loop></audio>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- شاشة العداد التنازلي لعيد الميلاد -->
+<section id="birthday-countdown-screen">
+    <div class="countdown-card">
+        <div class="countdown-header">
+            <span class="birthday-badge">🎂 SPECIAL COUNTDOWN 🎂</span>
+            <h1>العد التنازلي لعيد ميلاد الدكتورة بتول ❤️</h1>
+            <p>باقي القليل على اليوم الأجمل في السنة!</p>
+        </div>
+
+        <div class="timer-grid">
+            <div class="time-box">
+                <span id="cd-days" class="time-num">00</span>
+                <span class="time-unit">يوم</span>
+            </div>
+            <div class="time-box">
+                <span id="cd-hours" class="time-num">00</span>
+                <span class="time-unit">ساعة</span>
+            </div>
+            <div class="time-box">
+                <span id="cd-minutes" class="time-num">00</span>
+                <span class="time-unit">دقيقة</span>
+            </div>
+            <div class="time-box">
+                <span id="cd-seconds" class="time-num">00</span>
+                <span class="time-unit">ثانية</span>
+            </div>
+        </div>
+
+<button id="enter-site-btn" class="countdown-btn" onclick="startAppFromCountdown()" disabled>
+    🔒 باقي على الموعد... (الزر معطل حالياً)
+</button>
+    </div>
+</section> 
+
+
+
+
+
+
+
+
+
+
+    <!-- شاشة شاشة المراقبة الطبية (Hospital Monitor) -->
+    <section id="hospital-monitor-screen">
+        <div class="monitor-frame">
+            
+            <!-- الهيدر الطبي للمستشفى -->
+            <div class="hospital-header">
+                <div class="patient-info">
+                    <span class="patient-tag">PATIENT ID: #001</span>
+                    <span class="patient-name">DOCTOR OF MY HEART 🩺</span>
+                </div>
+                <div class="live-status">
+                    <span class="pulse-dot"></span> LIVE MONITORING
+                </div>
+            </div>
+
+            <!-- شبكة رسم القلب ECG -->
+            <div class="ecg-grid-container">
+                <svg class="ecg-monitor-svg" viewBox="0 0 600 120">
+                    <path d="M0,60 L100,60 L110,20 L120,100 L130,5 L140,115 L150,60 L250,60 L260,20 L270,100 L280,5 L290,115 L300,60 L600,60" />
+                </svg>
+            </div>
+
+            <!-- المؤشرات الحيوية (Vitals Dashboard) -->
+            <div class="vitals-row">
+                <div class="vital-card green">
+                    <span class="vital-label">HEART RATE (BPM)</span>
+                    <span class="vital-value" id="bpm-val">120</span>
+                    <span class="vital-status">CRITICAL </span>
+                </div>
+
+                <div class="vital-card cyan">
+                    <span class="vital-label">SPO2 (%)</span>
+                    <span class="vital-value">100%</span>
+                    <span class="vital-status">PURE OXYGEN</span>
+                </div>
+
+                <div class="vital-card red">
+                    <span class="vital-label">BLOOD PRESSURE</span>
+                    <span class="vital-value">120/80</span>
+                    <span class="vital-status">PERFECT MATCH</span>
+                </div>
+            </div>
+
+            <!-- الرسالة وزر فتح الجلسة -->
+            <div class="control-panel">
+                <p class="medical-diagnosis">اتمني ماتزعلي مني اني كنت مخبي عنك سر مرضي الي عندي دا</p>
+                <button class="medical-btn" onclick="openClinic()">
+                    <span class="btn-icon">😢</span> بدء جلسة الكشف عن السر
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- باقي محتوى الموقع -->
+    <main id="main-hospital-content" class="hidden">
+
+
+        <!-- الجزء الثاني: قسم الأشعة والتاريخ الطبي -->
+<section id="xray-section" class="hospital-section">
+    <div class="section-header">
+        <span class="dept-badge">DEPARTMENT OF RADIOLOGY 🔬</span>
+        <h2>قسم الأشعة(X-Ray)</h2>
+    </div>
+
+    <div class="xray-grid">
+        
+        <!-- كارت الأشعة 1 -->
+        <div class="xray-card">
+            <div class="xray-inner">
+                <div class="xray-front">
+                    <div class="xray-header">
+                        <span>SCAN #001</span>
+                        <span>DATE: FIRST MEET</span>
+                    </div>
+                    <div class="skeleton-scan">
+                        <div class="scan-line"></div>
+                        <span class="scan-icon">🩻</span>
+                        <p class="scan-label">SCANNING HEART AREA...</p>
+                    </div>
+                    <div class="xray-footer">
+                        <strong>التشخيص:</strong> ارتفاع حاد في سكر الدم
+                    </div>
+                </div>
+                <div class="xray-back" style="background-image: url('assets/images/pic1.jpg');">
+                    <div class="xray-overlay">
+                        <p> كل سنه وانتي بستي وفي حياتي ي اغلي  بست في دنيا دي كلها❤️</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- كارت الأشعة 2 -->
+        <div class="xray-card">
+            <div class="xray-inner">
+                <div class="xray-front">
+                    <div class="xray-header">
+                        <span>SCAN #002</span>
+                        <span>DATE: ALWAYS</span>
+                    </div>
+                    <div class="skeleton-scan">
+                        <div class="scan-line"></div>
+                        <span class="scan-icon">🧠</span>
+                        <p class="scan-label">BRAIN ACTIVITY: 100% YOU</p>
+                    </div>
+                    <div class="xray-footer">
+                        <strong>التشخيص:</strong> فرحه مزمنه ب روئيتك ووجودك في حياتي
+                    </div>
+                </div>
+                <div class="xray-back" style="background-image: url('assets/images/pic2.jpg');">
+                    <div class="xray-overlay">
+                        <p>جمالك اللي بينسيني أي تعب في الدنيا 🌟</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- كارت الأشعة 3 -->
+        <div class="xray-card">
+            <div class="xray-inner">
+                <div class="xray-front">
+                    <div class="xray-header">
+                        <span>SCAN #003</span>
+                        <span>DATE: FUTURE</span>
+                    </div>
+                    <div class="skeleton-scan">
+                        <div class="scan-line"></div>
+                        <span class="scan-icon">🎓</span>
+                        <p class="scan-label">DOCTOR OF MY LIFE</p>
+                    </div>
+                    <div class="xray-footer">
+                        <strong>التشخيص:</strong> أجدع صديقة وأشطر دكتورة بالدنيا
+                    </div>
+                </div>
+                <div class="xray-back" style="background-image: url('assets/images/pic3.jpg');">
+                    <div class="xray-overlay">
+                        <p>سندي وصحبتي وحبيبتي في كل خطوة 💖</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<!-- الجزء الثالث: المعمل التفاعلي المطور -->
+<section id="lab-section" class="hospital-section">
+    <div class="section-header">
+        <span class="dept-badge purple">ADVANCED CHEMICAL LAB 🧪</span>
+        <h2> المعمل:يلا بينا نشوف انتي من ايه</h2>
+    </div>
+
+    <div class="lab-workspace-v2">
+        <!-- صف أنابيب الاختبار -->
+        <div class="test-tubes-row">
+            <div class="tube-card" id="tube-card-1" onclick="pourTube(1, '#ff4b5c')">
+                <div class="tube-glass">
+                    <div id="tube-fill-1" class="tube-liquid red"></div>
+                </div>
+                <div class="tube-info">
+                    <h4>Tube #1</h4>
+                    <p>30% قلبك الابيض النضيف</p>
+                    <span class="tube-status" id="tube-status-1">جاهزة للتفريغ</span>
+                </div>
+            </div>
+
+            <div class="tube-card" id="tube-card-2" onclick="pourTube(2, '#00ffcc')">
+                <div class="tube-glass">
+                    <div id="tube-fill-2" class="tube-liquid cyan"></div>
+                </div>
+                <div class="tube-info">
+                    <h4>Tube #2</h4>
+                    <p>35% جنونك وضحكتك</p>
+                    <span class="tube-status" id="tube-status-2">جاهزة للتفريغ</span>
+                </div>
+            </div>
+
+            <div class="tube-card" id="tube-card-3" onclick="pourTube(3, '#ffe66d')">
+                <div class="tube-glass">
+                    <div id="tube-fill-3" class="tube-liquid yellow"></div>
+                </div>
+                <div class="tube-info">
+                    <h4>Tube #3</h4>
+                    <p>35% ذاكرةالحديده </p>
+                    <span class="tube-status" id="tube-status-3">جاهزة للتفريغ</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- جهاز الخلط والشاشات -->
+        <div class="reactor-box" id="reactor-box">
+            <div class="reactor-display">
+                <div class="display-header">
+                    <span>REACTION MONITOR</span>
+                    <span id="reactor-status-tag" class="status-tag">STANDBY</span>
+                </div>
+
+                <div class="reactor-gauge">
+                    <div>TEMP: <span id="reaction-temp" class="glow-val">36.6 °C</span></div>
+                    <div>PRESS: <span id="reaction-press" class="glow-val">1.0 ATM</span></div>
+                    <div>PROGRESS: <span id="reaction-progress" class="glow-val">0%</span></div>
+                </div>
+
+                <div class="mix-chamber">
+                    <div class="bubbles-container" id="bubbles">
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                    </div>
+                    <div id="chamber-liquid" class="chamber-liquid"></div>
+                </div>
+            </div>
+
+            <button id="start-mix-btn" class="mix-btn-v2" onclick="startReactor()">
+                ⚡ ابدأ التفاعل والدمج النهائي
+            </button>
+        </div>
+    </div>
+
+    <!-- كارت النتيجة النهائي -->
+    <div id="lab-result" class="lab-certificate hidden">
+        <div class="cert-header">OFFICIAL FORMULA CERTIFICATE 📜</div>
+        <h3>نتيجة التحليل: "التركيبة الأسطورية"</h3>
+        <p>تم اثبات أن هذه التركيبة تجمع بنسبة 100% بين ارق قلب واجدع بست وانضف حد في الدنيا دي كلها واجمل دكتوره واشطر دوك بحبك يبطه❤️</p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- الجزء الرابع: غرفة الطوارئ والعمليات -->
+<section id="emergency-section" class="hospital-section">
+    <div class="section-header">
+        <span class="dept-badge red">EMERGENCY ROOM (ER) 🛡️</span>
+        <h2>مركز إدارة الأزمات</h2>
+    </div>
+
+    <!-- شريط معلومات الاستجابة السريعة -->
+    <div class="er-status-bar">
+        <div>RESPONSE TIME: <span class="glow-green">0.1 sec (INSTANT)</span></div>
+        <div>DOCTOR ON DUTY: <span class="glow-cyan">MY BEST FRIEND & LOVE</span></div>
+        <div>SUCCESS RATE: <span class="glow-pink">100% LIFE SAVED</span></div>
+    </div>
+
+    <div class="er-cards-grid">
+        
+        <!-- تقرير طوارئ تفصيلي 1 -->
+        <div class="er-card" onclick="toggleErCard(this)">
+            <div class="er-card-header">
+                <span class="er-tag">INCIDENT REPORT #101</span>
+                <span class="er-severity critical">CRITICAL STRESS</span>
+            </div>
+            
+            <h3>أزمة قلبية</h3>
+            <p class="er-preview">انقري لتمرير التقرير الطبي ورؤية كيف أنقذتِ اليوم... 👈</p>
+            
+            <div class="er-full-content hidden">
+                <div class="incident-meta">
+                    <span><b>الأعراض:</b> قلق مفرط، انسداد أمل، تفكير مشتت</span>
+                    <span><b>مكان التدخل:</b> صوتك ف المكلمات وضحكتك ي بطتي الي بيغيرني</span>
+                </div>
+                
+                <div class="doctor-action-box">
+                    <strong>🩺 التدخل العلاجي للدكتورة:</strong>
+                    <p>انك بتسمعيني وبتخليني اتكلم وبتسمعي هبلي وعبطي والي بقوله ليكي ومش بتضايقي من رغي</p>
+                </div>
+
+                <p class="er-final-note"><b>النتيجة:</b> بتشيلي زعلي وبتخليني احسن ونجحتي ي دكتورتي❤️</p>
+            </div>
+        </div>
+
+        <!-- تقرير طوارئ تفصيلي 2 -->
+        <div class="er-card" onclick="toggleErCard(this)">
+            <div class="er-card-header">
+                <span class="er-tag">INCIDENT REPORT #102</span>
+                <span class="er-severity warning">HIGH ANXIETY</span>
+            </div>
+            
+            <h3>لحظات الخوف والتشتت من المستقبل</h3>
+            <p class="er-preview">انقري لتمرير التقرير الطبي ورؤية كيف أنقذتِ اليوم... 👈</p>
+
+            <div class="er-full-content hidden">
+                <div class="incident-meta">
+                    <span><b>الأعراض:</b> تردد في القرارات، فقدان الامل واني اقولك كلام سلبي ليا وانتي بتمتصي دا</span>
+                    <span><b>مكان التدخل:</b> جلسة كلام صادقة بيننا</span>
+                </div>
+                
+                <div class="doctor-action-box">
+                    <strong>🩺 التدخل العلاجي للدكتورة:</strong>
+                    <p>إعادة ترتيب أفكاري بذكاء شديد، التذكير بنقاط قوتي، ومساندتي كصديقة ووبست فرند وقلبي لا تتخلى عني أبداً.</p>
+                </div>
+
+                <p class="er-final-note"><b>النتيجة:</b>  استعادة الثقة كاملة والانطلاق نحو الهدف بنجاح ودايما بفتكر ان الهدف الي بعمل كل دا علشانه يستاهل🌟</p>
+            </div>
+        </div>
+
+        <!-- تقرير طوارئ تفصيلي 3 -->
+        <div class="er-card" onclick="toggleErCard(this)">
+            <div class="er-card-header">
+                <span class="er-tag">INCIDENT REPORT #103</span>
+                <span class="er-severity info">DAILY VITAMINS</span>
+            </div>
+            
+            <h3>طوارئ الأيام الروتينية والإنهاك</h3>
+            <p class="er-preview">انقري لتمرير التقرير الطبي ورؤية كيف أنقذتِ اليوم... 👈</p>
+
+            <div class="er-full-content hidden">
+                <div class="incident-meta">
+                    <span><b>الأعراض:</b> ملل، إرهاق الشغل، احتياج لطاقة</span>
+                    <span><b>مكان التدخل:</b> رسالة وضحكه وصوره منك ي  بطتي</span>
+                </div>
+                
+                <div class="doctor-action-box">
+                    <strong>🩺 التدخل العلاجي للدكتورة:</strong>
+                    <p>جرعة مركزة من خفة الدم، المشاركة في تفاصيل يومية صغيرة، وتحويل اليوم الروتيني لذكرى مميزة زي م بتعملي علطول ي بطتي.</p>
+                </div>
+
+                <p class="er-final-note"><b>النتيجة:</b> شحن الطاقة 100% والابتسامة لا تفارق وجهي 💖</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- الجزء الخامس: صيدلية الراحة والدلع المعتمدة -->
+<section id="pharmacy-section" class="hospital-section">
+    <div class="section-header">
+        <span class="dept-badge cyan">SMART PHARMACY FOR HER 💊</span>
+        <h2>صيدلية الراحة: روشتة حصرية ليكي أنتِ</h2>
+    </div>
+
+    <div class="pharmacy-grid-v2">
+        
+        <!-- علبة دواء تفاعلية 1 -->
+        <div class="med-box-v2" onclick="toggleCoupon(this)">
+            <div class="med-top">
+                <span class="med-code">Rx-2026-A</span>
+                <span class="med-tag-badge">فيتامينات الراحة</span>
+            </div>
+            
+            <div class="med-body">
+                <div class="pill-icon-glow">🎬</div>
+                <h3>فيتامين إجازة نتفرج علي فيلم  مع بعض</h3>
+                <div class="med-formula">المادة الفعالة: 100% دلع + أكل حلو + راحة بال</div>
+            </div>
+
+            <div class="med-details hidden">
+                <hr class="dashed-line">
+                <ul class="med-info-list">
+                    <li><b>دواعي الاستعمال:</b> تضيع وقت من حد بحبه وبموت فيه</li>
+                    <li><b>الجرعة:</b> يوم كامل إجازة نقضيه مع بعض ونتفرج ونقعد  مع بعض</li>
+                    <li><b>شروط الضمان:</b> التكلفة كاملة عليّ أنا وبدون أي نقاش.</li>
+                </ul>
+                <button class="redeem-btn" onclick="claimAction(event, this)">
+                    🔒 اضغطي لتفعيل الكوبون واستخراجه
+                </button>
+            </div>
+        </div>
+
+        <!-- علبة دواء تفاعلية 2 -->
+        <div class="med-box-v2" onclick="toggleCoupon(this)">
+            <div class="med-top">
+                <span class="med-code">Rx-2026-B</span>
+                <span class="med-tag-badge">جرعات فورية</span>
+            </div>
+            
+            <div class="med-body">
+                <div class="pill-icon-glow">🎮</div>
+                <h3>جرعة أكلة مفضلة (Food Therapy)</h3>
+                <div class="med-formula">المادة الفعالة:نلعب جيمز مع بعض</div>
+            </div>
+
+            <div class="med-details hidden">
+                <hr class="dashed-line">
+                <ul class="med-info-list">
+                    <li><b>دواعي الاستعمال:</b> عند الملل الشديد أو الاحتياج لتغيير جو.</li>
+                    <li><b>الجرعة:</b>نلعب مع بعض طول اليوم.</li>
+                    <li><b>شروط الضمان:</b> جاهز للتنفيذ في أي وقت طوال 24 ساعة.</li>
+                </ul>
+                <button class="redeem-btn" onclick="claimAction(event, this)">
+                    🔒 اضغطي لتفعيل الكوبون واستخراجه
+                </button>
+            </div>
+        </div>
+
+        <!-- علبة دواء تفاعلية 3 -->
+        <div class="med-box-v2" onclick="toggleCoupon(this)">
+            <div class="med-top">
+                <span class="med-code">Rx-2026-C</span>
+                <span class="med-tag-badge">مُسكنات عاطفية</span>
+            </div>
+            
+            <div class="med-body">
+                <div class="pill-icon-glow">💞</div>
+                <h3>بحبك</h3>
+                <div class="med-formula">المادة الفعالة: اعملك الي انتي  تطلبيه بدون شروط</div>
+            </div>
+
+            <div class="med-details hidden">
+                <hr class="dashed-line">
+                <ul class="med-info-list">
+                    <li><b>دواعي الاستعمال:</b> اي وقت تحبيه ي بطتي</li>
+                    <li><b>الجرعة:</b> 24 مره فاليوم بمعدل مره كل ساعه تدوم مفعول المره ساعه</li>
+                    <li><b>شروط الضمان:</b> صالحة مدى الحياة وغير قابلة للإلغاء.</li>
+                </ul>
+                <button class="redeem-btn" onclick="claimAction(event, this)">
+                    🔒 اضغطي لتفعيل الكوبون واستخراجه
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- المكتبة الخاصة بالألعاب النارية والشهادة -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+<!-- الجزء السادس: النهاية السينمائية -->
+<section id="finale-section" class="hospital-section">
+    <div class="section-header">
+        <span class="dept-badge gold">GOLDEN FINALE 🌟</span>
+        <h2>القمر منورنا  بقالو كام يوم </h2>
+    </div>
+
+    <!-- 1. العداد الفلكي المباشر -->
+    <div class="astro-counter-grid">
+        <div class="astro-card">
+            <span class="astro-label">عدد الأيام التي نورتينا فيها ي قلبي☀️</span>
+            <span class="astro-value" id="days-count">0</span>
+            <span class="astro-unit">يوم مبهج</span>
+        </div>
+
+        <div class="astro-card">
+            <span class="astro-label">بقالك كام ثانيا معانا ي قلبي⏳</span>
+            <span class="astro-value" id="seconds-count">0</span>
+            <span class="astro-unit">ثانيةوجودك معانا  </span>
+        </div>
+
+        <div class="astro-card">
+            <span class="astro-label">عدد دقات قلبكِ💓</span>
+            <span class="astro-value" id="beats-count">0</span>
+            <span class="astro-unit">نبضة أمل</span>
+        </div>
+    </div>
+
+    <!-- 2. الرسالة التلقائية المكتوبة -->
+    <div class="letter-box">
+        <div class="letter-header">📜 رسالة تقدير من القلب:</div>
+        <p id="typewriter-text" class="typewriter-text"></p>
+    </div>
+
+    <!-- 3. زر إطلاق الاحتفال وطباعة الشهادة -->
+    <div class="finale-actions">
+        <button class="gold-btn" onclick="triggerFinaleConfetti()">
+            🎉 إطلاق الألعاب النارية والاحتفال
+        </button>
+    </div>
+</section>
+
+
+
+
+<!-- قسم المجهر والتفاصيل الدقيقة المطور -->
+<section id="microscope-section" class="hospital-section">
+    <div class="section-header">
+        <span class="dept-badge cyan">PINCH-TO-ZOOM MICROSCOPE 🔬</span>
+        <h2>(Microscope View)</h2>
+    </div>
+
+    <div class="microscope-workspace">
+        <div class="zoom-level-badge">LEVEL: <span id="zoom-level-indicator">1.0x</span></div>
+
+        <!-- الشريحة الزجاجية الرئيسية -->
+        <div class="slide-container-v2" id="slide-container-v2">
+            <div class="slide-viewport" id="slide-viewport">
+                <span class="slide-label">SAMPLE #2026: YOUR HIDDEN DETAILS</span>
+                <p id="micro-detail-text" class="micro-text-display">
+                    حرّكي وسحّبي صوابعك للتكبير واعرفي المستخبي...
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
